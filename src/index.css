@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -11,3 +12,81 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Container for the chat interface */
+.chat-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+/* Styling for the chat icon/image */
+.chat-img {
+  transition: transform 0.3s ease-in-out;
+  height: 60px;
+  width: 60px;
+  float: right;
+  z-index: 999;
+}
+
+/* Styling for the chat image when hovered */
+.chat-img.hovered {
+  transform: scale(1.1);
+}
+
+/* Media query for screens wider than 900px */
+@media only screen and (min-width: 900px) {
+  /* Styling for iframes */
+  iframe {
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    position: relative;
+    bottom: 10px;
+    height: 60vh;
+  }
+}
+
+.cancel-chatbot {
+  display: none;
+}
+
+/* Media query for screens narrower than 900px */
+@media only screen and (max-width: 900px) {
+  /* Resetting styles for .chat-container */
+  .chat-container {
+    all: unset;
+  }
+
+  /* Resetting styles for .chat-img */
+  .chat-img {
+    cursor: pointer;
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+  }
+
+  /* Resetting styles for iframes */
+  iframe {
+    all: unset;
+    width: 100%;
+    height: calc(100vh - 60px) !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Styling for cancel button in mobile view */
+  .cancel-chatbot {
+    display: unset;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    background: #000000;
+  }
+
+  /* Hide chat image in mobile view */
+  .chat-img-hide {
+    display: none !important;
+  }
+}
+
