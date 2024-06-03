@@ -2,7 +2,14 @@
 
 ## Introduction
 
-This package provides a React component for embedding a chatbot into your web application. The chatbot is displayed as an iframe, allowing seamless integration into your UI.
+This project is a chatbot component developed using React, which can be seamlessly integrated into any frontend application using an iframe. The chatbot provides a flexible and user-friendly way to add conversational capabilities to your application, enhancing user interaction and support.
+
+## Features
+
+- Seamless Integration: Easily embed the chatbot in any web application using a simple iframe.
+- React-Based: Built with React for a modular and maintainable codebase.
+- Customizable: Modify the appearance and behavior of the chatbot to match your application's style and needs.
+- Responsive Design: Ensures a consistent user experience across different devices and screen sizes.
 
 ## Installation
 
